@@ -11,9 +11,9 @@
 
 **COMMENT JOUEZ:**
 
-Utilisez les flèches directionnelle pour changez de direction.
-Evitez de toucher les murs ou votre queue.
-Votre but est de manger le plus de pommes que vous pourrez.
-Vous pouvez changez la difficulté en choisissant une option et en cliquant sur ok.
-La longueur correspond a votre longueur actuel.
-La meilleur longueur est votre meilleur score personel.
+- Utilisez les flèches directionnelle pour changez de direction.
+- Evitez de toucher les murs ou votre queue.
+- Votre but est de manger le plus de pommes que vous pourrez.
+- Vous pouvez changez la difficulté en choisissant une option et en cliquant sur ok.
+- La longueur correspond a votre longueur actuel.
+- La meilleur longueur est votre meilleur score personel.
