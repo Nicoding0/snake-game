@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html id="html" lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:400,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Jouez a Snake!</title>
+  </head>
+  <body>
+    <header>
+      <div class="lang-container">
+        <a id="lang-uk" href="./snake.html">
+          <img src="icons/united-kingdom-32.png" alt="English" />
+        </a>
+
+        <a id="lang-fr" href="./snake-fr.html">
+          <img src="icons/france-32.png" alt="France" />
+        </a>
+      </div>
+      <div class="title">
+        <h1>Snake</h1>
+      </div>
+    </header>
+    <div class="container">
+      <div class="scoreBoard">
+        <div class="lengthSection">
+          <div class="currentLength">
+            <p>Longueur:</p>
+            <span class="lengthScore"></span>
+          </div>
+          <div class="highLength">
+            <p>Meilleure longueur:</p>
+            <span class="highestLength"></span>
+          </div>
+        </div>
+        <p id="diffSelect">Difficulté:</p>
+        <div class="diff">
+          <select id="diffSelector">
+            <option value="200">Facile</option>
+            <option value="100" selected>Moyen</option>
+            <option value="65">Difficile</option>
+          </select>
+          <button id="okBtn">Ok</button>
+        </div>
+      </div>
+
+      <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+      <div class="howToPlay">
+        <h3>COMMENT JOUEZ:</h3>
+        <footer>
+          <p>Utilisez les flèches directionnelle pour changez de direction.</p>
+          <p>Evitez de toucher les murs ou votre queue.</p>
+          <p>Votre but est de manger le plus de pommes que vous pourrez.</p>
+          <p>
+            Vous pouvez changez la difficulté en choisissant une option et en
+            cliquant sur ok.
+          </p>
+          <p>La longueur correspond a votre longueur actuel.</p>
+          <p>La meilleur longueur est votre meilleur score personel.</p>
+        </footer>
+      </div>
+
+      <script src="food.js"></script>
+      <script src="snake.js"></script>
+      <script src="app.js"></script>
+    </div>
+  </body>
+</html>

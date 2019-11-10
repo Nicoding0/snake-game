@@ -1,0 +1,172 @@
+/**General stuff*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  /**Centering*/
+  display: flex;
+
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background: #242424;
+}
+
+/**Header*/
+
+.lang-container {
+  margin: 2em 0 2em 4em;
+  outline: 2px solid whitesmoke;
+  outline-offset: 0.5em;
+}
+
+header {
+  background: rgb(36, 36, 36);
+  display: flex;
+  color: rgb(245, 245, 245);
+  border-bottom: 4px solid whitesmoke;
+}
+
+img {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0.2em;
+  color: whitesmoke;
+}
+
+img:hover {
+  transform: scale(1.12);
+}
+
+a {
+  text-decoration: none;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  transform: translateX(-60%);
+}
+
+.title h1 {
+  font-size: 2.3em;
+  letter-spacing: 0.05em;
+  /*border-bottom: 4px solid rgb(245, 245, 245);*/
+  padding: 0 0.1em 0 0.1em;
+}
+
+/**Score Board*/
+
+.scoreBoard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  font-size: 1.5em;
+  padding-bottom: 0.5em;
+  padding-top: 2.5em;
+}
+.scoreBoard span {
+  font-size: 1em;
+  padding-left: 0.3em;
+}
+
+.currentLength {
+  display: flex;
+  align-items: center;
+}
+
+.highLength {
+  display: flex;
+}
+
+/**difficulty*/
+
+#diffSelector {
+  display: flex;
+  font-size: 0.8em;
+  padding: 0.1em;
+  width: 4.2em;
+  background: whitesmoke;
+  border: none;
+  color: rgb(36, 36, 36);
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+}
+
+p {
+  font-size: 0.8em;
+}
+
+#diffSelect {
+  padding: 0 0.5em 0 3em;
+}
+
+#diffSelector {
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.diff {
+  display: flex;
+}
+
+#okBtn {
+  color: rgb(36, 36, 36);
+  border: none;
+  background: whitesmoke;
+  padding: 0.5em;
+  font-size: 0.7em;
+  border-left: 2px solid rgb(36, 36, 36);
+  cursor: pointer;
+  font-weight: 700;
+}
+/**Canvas*/
+
+#gameCanvas {
+  border: 10px solid rgba(175, 17, 17, 0.637);
+  background: rgba(128, 128, 128, 0.171);
+}
+
+/**How to play section*/
+
+.howToPlay {
+  display: inherit;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5em 0 0 0;
+}
+
+h3 {
+  font-size: 1.5em;
+  letter-spacing: 0.05em;
+  font-weight: 900;
+  color: #adff2f;
+  text-decoration: 3px underline greenyellow;
+  margin-bottom: 0.7em;
+}
+
+footer {
+  max-width: 550px;
+}
+
+footer p {
+  color: #a8ef3e;
+  text-align: center;
+  font-size: 0.9em;
+  letter-spacing: 0.03em;
+  margin-top: 0.7em;
+  font-weight: 700;
+}
