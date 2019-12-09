@@ -2,6 +2,8 @@
 
 **HOW TO PLAY:**
 
+### Plays better on Firefox!
+
 - Use the Arrow Keys to change direction.
 - Avoid hitting walls or your snake's tail.
 - Your goal is to eat as much apples as you can.
@@ -10,6 +12,8 @@
 - The Highest length number is your personal high-score.
 
 **COMMENT JOUEZ:**
+
+### Ce joue mieux sur Firefox!
 
 - Utilisez les flèches directionnelle pour changez de direction.
 - Evitez de toucher les murs ou votre queue.
