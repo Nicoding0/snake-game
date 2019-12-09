@@ -4,6 +4,7 @@ let score = document.querySelector(".lengthScore");
 let diff = document.getElementById("diffSelector");
 let highestLength = document.querySelector(".highestLength");
 const diffConfirm = document.getElementById("okBtn");
+let detectInterval;
 
 let hiScore = localStorage.getItem("highScore") || 0;
 highestLength.textContent = hiScore;
@@ -54,7 +55,13 @@ difficulty = diff;
     food.draw();
     snake.draw();
 
-    snake.collisionDetect();
+    detectInterval = setInterval(() => {
+      snake.collisionDetect();
+    }, 100);
+
+    if (snake.collisionDetect()) {
+      clearInterval(detectInterval);
+    }
 
     //*if snake head is on coords of the food then change food position
     //*and object method will increment eaten

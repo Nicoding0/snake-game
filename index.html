@@ -1,77 +1,78 @@
 <!DOCTYPE html>
 <html id="html" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:400,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Play Snake!</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="./style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900&display=swap" rel="stylesheet" />
-  <title>Play Snake!</title>
-</head>
+  <body>
+    <!--!REVIEW THE CODE AND UNDERSTAND IT! ESPECIALLY SNAKE.JS-->
 
-<body>
-  <!--!REVIEW THE CODE AND UNDERSTAND IT! ESPECIALLY SNAKE.JS-->
+    <!--!FIX GAME OVER CONFIRM BOX ON CHROME BROWSER-->
 
-  <!--!FIX GAME OVER CONFIRM BOX ON CHROME BROWSER-->
+    <header>
+      <div class="lang-container">
+        <a id="lang-fr" href="./snake-fr.html">
+          <img src="icons/france-32.png" alt="France" />
+        </a>
 
-  <header>
-    <div class="lang-container">
-      <a id="lang-fr" href="./snake-fr.html">
-        <img src="icons/france-32.png" alt="France" />
-      </a>
-
-      <a id="lang-uk" href="./snake.html">
-        <img src="icons/united-kingdom-32.png" alt="English" />
-      </a>
-    </div>
-    <div class="title">
-      <h1>Snake</h1>
-    </div>
-  </header>
-  <div class="container">
-    <div class="scoreBoard">
-      <div class="lengthSection">
-        <div class="currentLength">
-          <p>Length:</p>
-          <span class="lengthScore"></span>
+        <a id="lang-uk" href="./snake.html">
+          <img src="icons/united-kingdom-32.png" alt="English" />
+        </a>
+      </div>
+      <div class="title">
+        <h1>Snake</h1>
+      </div>
+    </header>
+    <div class="container">
+      <div class="scoreBoard">
+        <div class="lengthSection">
+          <div class="currentLength">
+            <p>Length:</p>
+            <span class="lengthScore"></span>
+          </div>
+          <div class="highLength">
+            <p>Highest Length:</p>
+            <span class="highestLength"></span>
+          </div>
         </div>
-        <div class="highLength">
-          <p>Highest Length:</p>
-          <span class="highestLength"></span>
+        <p id="diffSelect">Difficulty:</p>
+        <div class="diff">
+          <select id="diffSelector">
+            <option value="200">Easy</option>
+            <option value="100" selected>Medium</option>
+            <option value="65">Hard</option>
+          </select>
+          <button id="okBtn">Ok</button>
         </div>
       </div>
-      <p id="diffSelect">Difficulty:</p>
-      <div class="diff">
-        <select id="diffSelector">
-          <option value="200">Easy</option>
-          <option value="100" selected>Medium</option>
-          <option value="65">Hard</option>
-        </select>
-        <button id="okBtn">Ok</button>
+
+      <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+      <div class="howToPlay">
+        <h3>HOW TO PLAY:</h3>
+        <footer>
+          <p>Use the Arrow Keys to change direction.</p>
+          <p>Avoid hitting walls or your snake's tail.</p>
+          <p>Your goal is to eat as much apples as you can.</p>
+          <p>
+            You can change the difficulty by choosing an option and clicking Ok.
+          </p>
+          <p>Length is you current length.</p>
+          <p>The Highest length number is your personal high-score.</p>
+        </footer>
       </div>
+
+      <script src="food.js"></script>
+      <script src="snake.js"></script>
+      <script src="app.js"></script>
     </div>
-
-    <canvas id="gameCanvas" width="400" height="400"></canvas>
-
-    <div class="howToPlay">
-      <h3>HOW TO PLAY:</h3>
-      <footer>
-        <p>Use the Arrow Keys to change direction.</p>
-        <p>Avoid hitting walls or your snake's tail.</p>
-        <p>Your goal is to eat as much apples as you can.</p>
-        <p>
-          You can change the difficulty by choosing an option and clicking Ok.
-        </p>
-        <p>Length is you current length.</p>
-        <p>The Highest length number is your personal high-score.</p>
-      </footer>
-    </div>
-
-    <script src="food.js"></script>
-    <script src="snake.js"></script>
-    <script src="app.js"></script>
-  </div>
-</body>
-
+  </body>
 </html>
