@@ -8,10 +8,14 @@ const diffConfirm = document.getElementById("okBtn");
 let hiScore = localStorage.getItem("highScore") || 0;
 highestLength.textContent = hiScore;
 
+//*grid of 10 represents a 10x10 square of pixels
+//*so the starting snake square will be width=10 and height=10
 const grid = 10;
+
 //*Rows and columns for the delimitation
-const rows = canvas.height / grid - 1;
-const cols = canvas.width / grid - 1;
+const rows = canvas.height / grid - 1; //* equals 39
+const cols = canvas.width / grid - 1; //* equals 39
+
 //*holds a new Snake object
 let snake;
 let food;
@@ -31,7 +35,7 @@ difficulty = diff;
   //*initial food position
   food.foodPos();
 
-  //*if food coords is on top of snake coords,
+  //*check if food coords is on top of snake coords
   //*then generate new food position otherwise it bugs out
   //*with the collision detection
   if (food.x === snake.x && food.y === snake.y) {
@@ -40,9 +44,11 @@ difficulty = diff;
 
   console.log(food);
 
-  //*draw and updates the snake position at an interval
+  //*LOOP| draw and updates the snake position at an interval
   //*interval milliseconds changes with difficulty setting with var -> difficulty
   window.setInterval(() => {
+    //*clear the whole canvas everytime this is called
+    //*otherwise it will leave a trail behind the snake
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     snake.update();
     food.draw();
@@ -50,13 +56,18 @@ difficulty = diff;
 
     snake.collisionDetect();
 
+    //*if snake head is on coords of the food then change food position
+    //*and object method will increment eaten
+    //*
+    //*if snake.eat(pass the food called from here) returns true then do food.foodpos
     if (snake.eat(food)) {
       food.foodPos();
     }
     //*display current length
     score.textContent = snake.eaten;
 
-    //*Highest length persistent storage
+    //*Highest length persistent storage(highscore)
+    //!but not real time!
     if (snake.eaten > hiScore) {
       localStorage.setItem("highScore", snake.eaten);
     }
